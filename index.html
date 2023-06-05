@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Task Application</title> 
+        <style>
+            .sort-btn{
+                background-color: #85b6fd;
+              border: #85b6fd;
+              cursor: pointer;
+          }    
+          </style> 
+    </head>
+    <body class="bg-primary bg-opacity-50">
+        <div class="container my-5 p-5">
+          <h1 class="mb-4 text-black border-bottom border-black">To do list Application</h1>
+            <div class="row g-2">
+              <div class="col-md-5">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="taskName" placeholder="Task">
+                  <label for="floatingInputGrid">Task Name</label>
+                  <p id="errorTask"></p>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-floating">
+                    <select class="form-select" name="priority"  class="form-select" id="numberPriority">
+                    <option value="0">Please select Priority</option>
+                        <option value="Low">Low</option>
+                      <option value="Medium">Medium</option>
+                      <option value="High">High</option>
+                    </select>
+                   <label for="floatingSelectGrid">Select Number Priority</label>
+                  <p id="errorPriority"></p>
+                 </div>
+                </div>
+                <div class="col-md-2">
+                <div class="btn p-3 btn-success"  onclick="addTask()">Add Task</div>
+              </div>
+            </div>
+           </div>
+         <div class="container">
+          <table class="table tasks-table">
+           <thead>
+            <th>#</th>
+            <th >Task Name</th>
+            <th>Number Of Priority
+            <select class="sort-btn " name="priority" onchange="sortList()" id="list" >  
+                <option value="0">Low Or High</option>
+                <option value="1">Priority Low</option>
+                <option value="2">Priority High</option>
+            </select>
+          </th>
+          <th>Update</th>
+          <th>Delete</th>
+    </thead>
+    <tbody id="tasks">
+    </tbody>
+  </table>
+</div>
+   <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
